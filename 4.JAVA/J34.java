@@ -17,17 +17,32 @@ public class J34 {
         int[] ENTRADA = new int[CUSTOM];
         float MEDIA;
         int SOMA = 0, i;
-        int TAMANHO = ENTRADA.length;
+        int MENOR, MAIOR;
 
-        for (i = 0; i < CUSTOM; i++) {
-            System.out.printf("%d.Número: ", i + 1);
+        System.out.print("1. Número: ");
+        ENTRADA[0] = leitor.nextInt();
+        SOMA = ENTRADA[0];
+        MENOR = MAIOR = ENTRADA[0];
+
+        for (i = 1; i < CUSTOM; i++) {
+            System.out.printf("%d. Número: ", i + 1);
             ENTRADA[i] = leitor.nextInt();
             SOMA += ENTRADA[i];
+
+            if (ENTRADA[i] < MENOR) {
+                MENOR = ENTRADA[i];
+            }
+
+            if (ENTRADA[i] > MAIOR) {
+                MAIOR = ENTRADA[i];
+            }
         }
 
-        MEDIA = (float) SOMA / TAMANHO;
+        MEDIA = (float) SOMA / CUSTOM;
 
         System.out.printf("Soma: %d\n", SOMA);
-        System.out.printf("Media: %.2f\n", MEDIA);
+        System.out.printf("Média: %.2f\n", MEDIA);
+        System.out.printf("Menor: %d\n", MENOR);
+        System.out.printf("Maior: %d\n", MAIOR);
     }
 }

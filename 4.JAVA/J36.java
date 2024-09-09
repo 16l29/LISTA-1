@@ -6,7 +6,7 @@ public class J36 {
     public static void main(String[] args){
         Scanner leitor = new Scanner(System.in);
 
-        int NUM, INTERVALO1, INTERVALO2;
+        int NUM, INTERVALO1, INTERVALO2, MENOR, MAIOR;
 
         System.out.print("Número: ");
         NUM = leitor.nextInt();
@@ -15,7 +15,15 @@ public class J36 {
         System.out.print("Segundo intervalo: ");
         INTERVALO2 = leitor.nextInt();
 
-        if (NUM >= INTERVALO1 && NUM <= INTERVALO2){
+        if (INTERVALO1 < INTERVALO2) {
+            MENOR = INTERVALO1;
+            MAIOR = INTERVALO2;
+        } else {
+            MENOR = INTERVALO2;
+            MAIOR = INTERVALO1;
+        }
+
+        if (NUM >= MENOR && NUM <= MAIOR){
             System.out.print("Número dentro do intervalo");
         }else{
             System.out.print("Número fora do intervalo");

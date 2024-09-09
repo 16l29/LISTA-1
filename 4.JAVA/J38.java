@@ -25,7 +25,7 @@ public class J38 {
         if (ESCALATUAL == ESCALANOVA) {
             TEMPNOVA = TEMPATUAL;
         } else if (ESCALATUAL == 'C' && ESCALANOVA == 'F') {
-            TEMPNOVA = (TEMPATUAL * (1.8)) + 32;
+            TEMPNOVA = (TEMPATUAL * 1.8) + 32;
         } else if (ESCALATUAL == 'C' && ESCALANOVA == 'K') {
             TEMPNOVA = TEMPATUAL + 273.15;
         } else if (ESCALATUAL == 'K' && ESCALANOVA == 'C') {

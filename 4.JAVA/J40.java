@@ -21,7 +21,7 @@ public class J40 {
 
             MEDIAS[i] = (NOTAS[i][0] + NOTAS[i][1]) / 2;
 
-            if (MEDIAS[i] <= 6) {
+            if (MEDIAS[i] <= 6.0) {
                 System.out.print("AV3: ");
                 NOTAS[i][2] = leitor.nextDouble();
 

@@ -38,11 +38,15 @@ public class J39 {
             SOMA += IDADE;
             CONTAGEM++;
         }
-        MEDIA = (float) SOMA / CONTAGEM;
-        System.out.printf("Idade média: %.2f\n", MEDIA);
-        System.out.printf("Número de pessoas: %d\n", CONTAGEM);
-        System.out.printf("Maior: %d\n", MAIOR);
-        System.out.printf("Menor: %d\n", MENOR);
 
+        if (CONTAGEM > 0) {
+            MEDIA = (float) SOMA / CONTAGEM;
+            System.out.printf("Idade média: %.2f\n", MEDIA);
+            System.out.printf("Número de pessoas: %d\n", CONTAGEM);
+            System.out.printf("Maior: %d\n", MAIOR);
+            System.out.printf("Menor: %d\n", MENOR);
+        } else {
+            System.out.println("Nenhuma inserida.");
+        }
     }
 }

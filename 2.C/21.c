@@ -36,9 +36,16 @@ int main(){
         SOMA += IDADE;
         CONTAGEM++;
     }
-    MEDIA = (float) SOMA / CONTAGEM;
-    printf("Idade média: %.2f\n", MEDIA);
-    printf("Número de pessoas: %d\n", CONTAGEM);
-    printf("Maior: %d\n", MAIOR);
-    printf("Menor: %d\n", MENOR);
+
+    if (CONTAGEM > 0) {
+        MEDIA = (float) SOMA / CONTAGEM;
+        printf("Idade média: %.2f\n", MEDIA);
+        printf("Número de pessoas: %d\n", CONTAGEM);
+        printf("Maior: %d\n", MAIOR);
+        printf("Menor: %d\n", MENOR);
+    } else {
+        printf("Nenhuma idade inserida.\n");
+    }
+
+    return 0;
 }
